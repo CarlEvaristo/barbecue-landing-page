@@ -28,8 +28,9 @@ strong{
     font-weight: 900;
 }
 .small-txt {
-    font-size: 0.625rem;
+    font-size: 0.7rem;
     color: #989898;
+    letter-spacing: 1px;
 }
 .subtitle {
     font-size: 1.3125rem;
@@ -50,8 +51,9 @@ strong{
 /* ========== LAYOUT INTRO SECTION ========== */
 
 section {
-    background-image: url(images/dark-ribs.jpg) ;
-    background-color: #989898;
+    background-image: url(images/dark-ribs.jpg);
+    background-color: #fff;
+    background-blend-mode:multiply;
     background-size: cover;
     min-height: 60vh;
     display: flex;
@@ -99,21 +101,36 @@ input {
     font-family: inherit;
     text-align: inherit;
     font-size: inherit;
+    transform: scale(1);
+    transition: background-color 300ms, transform 300ms;
+}
+input:focus {
+    transform: scale(1.03);
+    background-color: antiquewhite;
 }
 
 .btn {
     width:100%;
     text-align: center;
     padding: 1.5em 0;
+    margin-bottom: 1em;
     color: #fff;
     border: none;
     border-radius: 7px;
     text-transform: uppercase;
-    background:linear-gradient(90deg, #ffa51d, #ff713b);
+    background-color:#ffa51d;
+    /* background:linear-gradient(90deg, #ffa51d, #ff713b); */
     font-size: 0.625rem;
+    font-weight: 900;
     letter-spacing: 0.17em;
+    cursor:pointer;
+    transition: background-color 350ms, transform 350ms;
+    transform: scale(1);
 }
-
+.btn:hover, .btn:focus {
+    transform: scale(1.03);
+    background-color: #404040;
+}
 section *,
 main * {
     max-width: 500px;
